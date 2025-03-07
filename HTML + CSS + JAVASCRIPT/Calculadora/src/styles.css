@@ -1,0 +1,56 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    margin: 80px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1e2327;
+}
+
+.resultado {
+    background-color: #3a4147;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 1.4em;
+    height: 50px;
+    width: 290px;
+    margin-bottom: 20px;
+}
+
+.numero {
+    background-color: #3a4147;
+    color: white;
+    border: none;
+    margin: 5px;
+    font-size: 1.2em;
+    border-radius: 100px;
+    height: 65px;
+    width: 65px;
+    cursor: pointer;
+}
+
+.operacao {
+    background-color: #4e8cff;
+    color: white;
+    border: none;
+    margin: 5px;
+    font-size: 1.2em;
+    border-radius: 100px;
+    height: 65px;
+    width: 65px;
+    cursor: pointer;
+}
