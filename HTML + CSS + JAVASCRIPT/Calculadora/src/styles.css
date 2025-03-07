@@ -31,7 +31,7 @@ body {
     width: 282px;
     margin-bottom: 20px;
     justify-items: right;
-    text-decoration: bold;
+    font-weight: bold;
 }
 
 .value {
