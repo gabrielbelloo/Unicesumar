@@ -22,12 +22,16 @@ body {
     color: white;
     border: none;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 10px;
     margin: 5px;
-    font-size: 1.4em;
+    font-size: 1.6em;
     height: 50px;
-    width: 290px;
+    width: 282px;
     margin-bottom: 20px;
+    justify-items: right;
+    text-decoration: bold;
 }
 
 .value {

@@ -1,5 +1,5 @@
-function clear() {
-    document.getElementById("display").value = "0";
+function clearDisplay() {
+    document.getElementById("display").value = "";
 }
 
 function addValue(value) {
@@ -7,10 +7,5 @@ function addValue(value) {
 }
 
 function calculate() {
-    try {
         document.getElementById("display").value = eval(document.getElementById("display").value);
-    } catch (error) {
-        alert("Expressão inválida!");
-        limpar();
-    }
 }
