@@ -54,3 +54,15 @@ body {
     width: 65px;
     cursor: pointer;
 }
+
+ .botoes{
+    background-color: #ff9500;
+    color: white;
+    border: none;
+    margin: 5px;
+    font-size: 1.2em;
+    border-radius: 100px;
+    height: 65px;
+    width: 65px;
+    cursor: pointer;
+}
