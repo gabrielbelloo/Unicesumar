@@ -12,31 +12,32 @@
 
     <div class="container">
 
-        <input class="resultado"> </input><br>
+        <input type="text" id="display" disabled><br>
 
-        <button class="botoes">AC</button>
-        <button class="operacao">(</button>
-        <button class="operacao">)</button>
-        <button class="operacao">/</button><br>
-        <button class="numero">1</button>
-        <button class="numero">2</button>
-        <button class="numero">3</button>
-        <button class="operacao">*</button><br>
-        <button class="numero">4</button>
-        <button class="numero">5</button>
-        <button class="numero">6</button>
-        <button class="operacao">-</button><br>
-        <button class="numero">7</button>
-        <button class="numero">8</button>
-        <button class="numero">9</button>
-        <button class="operacao">+</button><br>
-        <button class="numero">0</button>
-        <button class="numero">.</button>
-        <button class="operacao">%</button>
-        <button class="botoes">=</button>
+        <button class="botoes" onclick="clear()">AC</button>
+        <button class="operation" onclick="addValue()">(</button>
+        <button class="operation" onclick="addValue()">)</button>
+        <button class="operation" onclick="addValue('/')">/</button><br>
+        <button class="value" onclick="addValue('1')">1</button>
+        <button class="value" onclick="addValue('2')">2</button>
+        <button class="value" onclick="addValue('3')">3</button>
+        <button class="operation" onclick="addValue('*')">*</button><br>
+        <button class="value" onclick="addValue('4')">4</button>
+        <button class="value" onclick="addValue('5')">5</button>
+        <button class="value" onclick="addValue('6')">6</button>
+        <button class="operation" onclick="addValue('-')">-</button><br>
+        <button class="value" onclick="addValue('7')">7</button>
+        <button class="value" onclick="addValue('8')">8</button>
+        <button class="value" onclick="addValue('9')">9</button>
+        <button class="operation" onclick="addValue('+')">+</button><br>
+        <button class="value" onclick="addValue('0')">0</button>
+        <button class="value" onclick="addValue('.')">.</button>
+        <button class="operation" onclick="addValue('%')">%</button>
+        <button class="botoes" onclick="calculate('=')">=</button>
 
     </div>
-
+    
+    <script src="script.js"></script>
 </body>
 
 </html>
