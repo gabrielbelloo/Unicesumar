@@ -133,3 +133,77 @@ function calcularMaioridade(){
         document.getElementById('num10').value = "";
         document.getElementById('num11').value = "";
     }
+
+function exibir1a10(){
+    for(let i=0; i<11; i++){
+        console.log(i);
+    }
+}
+
+function exibir10a1(){
+    let i=10;
+    while(i>0){
+        console.log(i);
+        i--;
+    }
+}
+
+function verificarMaior10() {
+    let i=document.getElementById('num12').value;
+        if(i<10){
+            alert('Número menor que 10');
+    }else{
+        alert('Número maior que 10');
+    }
+}
+
+function tabuada7(){
+    for(let i=1; i<11; i++){
+        let resultado = 7 * i;
+        console.log('7 x ' + i + ' = ' + resultado);
+    }
+}
+
+function soma1a100(){
+    let resultado = 0;
+    for(let i=1; resultado<101; i++){
+        let tmp = resultado;
+        resultado += i;
+        console.log(tmp + ' + ' + i + ' = ' + resultado);
+    }
+}
+
+function exibePar() {
+    for(let i=0; i<51; i++){
+        if(i%2==0){
+            console.log(i);
+        }
+    }
+}
+
+let arrayNum = [1, 2, 3, 4, 5];
+
+function adicionarNum(){
+    let novoNum = parseInt(document.getElementById('num13').value, 10);
+    if (!isNaN(novoNum)) {
+        arrayNum.push(novoNum);
+        exibeArray();
+    }else{
+        console.log('Valor inválido!');
+    }
+}
+
+function exibeArray(){
+    for (let i = 0; i < arrayNum.length; i++) {
+        console.log(arrayNum[i]);
+    }
+    console.log('Primeiro = ' + arrayNum[0]);
+    console.log('Último = ' + arrayNum[arrayNum.length - 1]);
+}
+
+function somarParametros() {
+    let z = Number(document.getElementById('num14').value);
+    let y = Number(document.getElementById('num15').value);
+    let resultado = z + y;
+    console.log(resultado);
+}
