@@ -3,7 +3,7 @@
 #include <string.h>
 
 typedef struct No {
-    char nome[30];
+    char* nome;
     int idade;
     struct No* proximo;
 } No;
@@ -15,8 +15,11 @@ void push(No** topo) {
         return;
     }
 
+	char buffer[100];
     printf("Digite o nome: ");
     scanf(" %[^\n]", novo->nome);
+    
+    novo->nome = (char*)malloc(strlen(buffer) + 1);
 
     printf("Digite a idade: ");
     scanf("%d", &novo->idade);
@@ -24,39 +27,41 @@ void push(No** topo) {
     novo->proximo = *topo;
     *topo = novo;
 
-    printf("Elemento inserido com sucesso!\n");
+    printf("\nElemento inserido com sucesso!\n");
 }
 
 void pop(No** topo) {
     if (*topo == NULL) {
-        printf("A pilha está vazia. Nada para remover.\n");
+        printf("\nA pilha está vazia. Nada para remover.\n");
         return;
     }
 
     No* temp = *topo;
-    printf("Removendo: Nome = %s | Idade = %d\n", temp->nome, temp->idade);
+    printf("\nRemovendo: Nome = %s | Idade = %d\n", temp->nome, temp->idade);
 
     *topo = temp->proximo;
+    
+    free(temp->nome);
     free(temp);
 }
 
 void imprimir(No* topo) {
     if (topo == NULL) {
-        printf("A pilha está vazia\n");
+        printf("\nA pilha está vazia\n");
         return;
     }
 
     printf("\nElementos na pilha:\n");
     No* atual = topo;
     while (atual != NULL) {
-        printf("Nome: %s | Idade: %d\n", atual->nome, atual->idade);
+        printf("\nNome: %s | Idade: %d\n", atual->nome, atual->idade);
         atual = atual->proximo;
     }
 }
 
 void retornaQuantidade(No** topo) {
 	if (*topo == NULL) {
-		printf("A pilha está vazia\n");
+		printf("\nA pilha está vazia\n");
 		return;
 	}
 	
@@ -66,7 +71,7 @@ void retornaQuantidade(No** topo) {
 		cont = cont + 1;
 		atual = atual->proximo;
 	}
-	printf("A pilha contém %d elementos", cont);
+	printf("\nA pilha contém %d elementos", cont);
 }
 
 int main() {
