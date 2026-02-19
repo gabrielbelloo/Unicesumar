@@ -12,15 +12,15 @@ import java.util.List;
 public class PessoaController {
 
     @Autowired
-private PessoaService pessoaService;
+    private PessoaService pessoaService;
 
     @GetMapping
-private List<PessoaModel> findAll(){
-   return pessoaService.findAll();
-}
+    public List<PessoaModel> findAll(){
+        return pessoaService.findAll();
+    }
 
     @PostMapping
-    private PessoaModel criar(@RequestBody PessoaModel pessoaModel){
+    public PessoaModel criar(@RequestBody PessoaModel pessoaModel){
         return pessoaService.criar(pessoaModel);
     }
 }
