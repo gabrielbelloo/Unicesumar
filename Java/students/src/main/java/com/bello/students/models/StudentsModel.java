@@ -9,7 +9,9 @@ public class StudentsModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "studentName")
     private String name;
+    @Column(name = "studentEmail")
     private String email;
     private int age;
 
