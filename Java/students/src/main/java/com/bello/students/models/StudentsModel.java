@@ -1,5 +1,6 @@
 package com.bello.students.models;
 
+import com.bello.students.enums.StudentsEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,6 +15,7 @@ public class StudentsModel {
     @Column(name = "studentEmail")
     private String email;
     private int age;
+    private StudentsEnum studentsEnum;
 
     public Long getId() {
         return id;
@@ -45,6 +47,14 @@ public class StudentsModel {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public StudentsEnum getStudentsEnum(){
+        return studentsEnum;
+    }
+
+    public void setStudentsEnum(StudentsEnum studentsEnum){
+        this.studentsEnum = studentsEnum;
     }
 
     public StudentsModel(){
