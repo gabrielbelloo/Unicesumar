@@ -1,4 +1,4 @@
-package com.bello.produtos.models;
+package com.bello.produtos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

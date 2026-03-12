@@ -1,9 +1,8 @@
 package com.bello.produtos.services;
 
-import com.bello.produtos.ProdutoModel;
+import com.bello.produtos.models.ProdutoModel;
 import com.bello.produtos.repositories.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

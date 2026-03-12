@@ -1,5 +1,6 @@
-package com.bello.produtos;
+package com.bello.produtos.models;
 
+import com.bello.produtos.enums.ProdutoEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,7 @@ public class ProdutoModel {
     private String nome;
     private Double preco;
     private Integer quantidadeEmEstoque;
+    private ProdutoEnum produtoEnum;
 
     public Long getId() {
         return id;
