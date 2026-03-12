@@ -25,4 +25,10 @@ public class ProdutoService {
     public void delete(Long id){
         produtoRepository.deleteById(id);
     }
+
+    public ProdutoModel update(Long id, ProdutoModel produtoModel){
+        ProdutoModel model = produtoRepository.findById(id).get();
+        model.setNome(produtoModel.getNome());
+        return produtoRepository.save(produtoModel);
+    }
 }
