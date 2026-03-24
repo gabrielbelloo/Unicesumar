@@ -1,7 +1,7 @@
-package com.bello.tarefa.services;
+package com.bello.exercicios.services;
 
-import com.bello.tarefa.models.TarefaModel;
-import com.bello.tarefa.repositories.TarefaRepository;
+import com.bello.exercicios.models.TarefaModel;
+import com.bello.exercicios.repositories.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
