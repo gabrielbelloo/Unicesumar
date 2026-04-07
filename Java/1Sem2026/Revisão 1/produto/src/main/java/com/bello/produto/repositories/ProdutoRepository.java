@@ -1,4 +1,7 @@
 package com.bello.produto.repositories;
 
-public class ProdutoRepository {
+import com.bello.produto.models.ProdutoModel;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProdutoRepository extends JpaRepository<ProdutoModel, Long> {
 }
