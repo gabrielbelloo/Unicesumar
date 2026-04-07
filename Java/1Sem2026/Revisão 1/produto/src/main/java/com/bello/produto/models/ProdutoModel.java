@@ -1,7 +1,6 @@
 package com.bello.produto.models;
 
 import jakarta.persistence.*;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 @Entity
 @Table(name = "TBL_PRODUTO")

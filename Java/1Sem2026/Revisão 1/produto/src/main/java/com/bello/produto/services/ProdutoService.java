@@ -22,11 +22,14 @@ public class ProdutoService {
         return produtoRepository.findAll();
     }
 
-    public Optional<ProdutoModel> buscar(Long id){
-        return produtoRepository.findById(id);
+    public ProdutoModel buscar(Long id){
+        return produtoRepository.findById(id).orElseThrow(() -> new RuntimeException("Produto não encontrado"));
     }
 
     public void deletar(Long id){
+        if (!produtoRepository.existsById(id)) {
+            throw new RuntimeException("Produto não encontrado");
+        }
         produtoRepository.deleteById(id);
     }
 
